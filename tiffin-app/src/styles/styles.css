@@ -324,3 +324,251 @@
     padding-top: 50px;
 }
 }
+
+
+/*ROTI*/
+
+.Roti {
+  padding: 50px 0;
+  margin-top: -5rem; 
+  background-image: url('../assets/rotiBG.svg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.roti-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.roti-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.floating-img {
+  width: 50%; /* Adjust width to create spacing between images */
+  display: flex;
+  justify-content: center;
+}
+
+.floating-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img2 {
+  margin-top: -110px;
+  margin-right: 70px;
+}
+
+.img3 {
+  margin-top: 150px;
+}
+
+.img1 {
+  margin-left: 70px;
+}
+
+@media (max-width: 768px) {
+  .floating-img {
+      display: none;
+  }
+
+  .Roti {
+    padding: 50px 0;
+    margin-top: -5rem; 
+    background-image: url('../assets/rotiBG.svg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
+}
+
+/* catering */
+.catering-page {
+  padding: 50px 0; /* Add padding to the top and bottom of the page */
+  background-color: #f8f9fa; 
+  padding: 50px 0;
+  margin-top: -5rem; 
+  background-image: url('../assets/customBG.svg');
+  background-size: cover;
+  background-position: center;
+  height: 140vh;
+}
+
+.catering-section {
+  padding-top: 50px;
+}
+
+.catering-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.catering-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 100%; /* Limit width for better readability */
+  color: #222222;
+  text-align: left; /* Ensure paragraph text is aligned left */
+}
+
+
+.call-to-action-section-catering {
+  padding: 50px 0; /* Adjust padding as needed */;
+  margin-bottom: 10%;
+}
+
+
+@media (max-width: 768px) {
+.catering-page {
+  height: 165vh;
+  }
+}
+
+/* Order */
+.order-page {
+  padding-top: 50px; /* Adds padding around the page */
+  background-color: #FFE1C6;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+
+.form-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: left; /* Left-align the heading */
+}
+
+.illustration {
+  max-width: 80%; /* Adjust size of the illustration */
+  height: auto;
+  padding: 50px;
+}
+
+form {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .illustration {
+      max-width: 80%; /* Adjust illustration size for mobile */
+  }
+}
+
+/* tiffin */
+.tiffin-page {
+  padding-top: 50px; /* Add padding to the top and bottom of the page */
+  background-color: #f8f9fa; 
+  padding: 50px 0;
+  background-image: url('../assets/customBG.svg');
+  background-size: cover;
+  background-position: center;
+  height: 175vh;
+}
+
+.tiffin-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #222222; /* Optional text color */
+  text-align: left; /* Left-align paragraph */
+}
+
+/* Rectangular product container */
+.product-container {
+  background-color: #FCF0E5;
+  border-radius: 15px;
+  border: #AEAEAE solid 0.8px;
+  padding: 30px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  align-items: center;
+  transform: scale(80%);
+}
+
+.product-details {
+  text-align: left; /* Align text to the left */
+  padding: 50px;
+}
+
+.product-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-left: 5rem;
+  color: var(--primary);
+}
+
+.product-description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  margin-left: 5rem;
+  color: #222222;
+}
+
+/* Price options */
+.price-container {
+  background-color: #F5F5FD;
+  padding: 15px;
+  border-radius: 8px;
+  margin-left: 5rem;
+  max-width: 250px; /* Adjust width for smaller container */
+}
+
+.price-option {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.price-option span {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* Tiffin image */
+.tiffin-image {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .product-title {
+    margin-left: 0rem;
+    text-align: center;
+  }
+  
+  .product-description {
+    margin-left: 0rem;
+    text-align: center;
+
+  }
+  
+  /* Price options */
+  .price-container {
+    text-align: center;
+    margin-left: 3.2rem;
+  }
+
+  .tiffin-page {
+    padding-top: 50px; /* Add padding to the top and bottom of the page */
+    background-color: #f8f9fa; 
+    padding: 50px 0;
+    background-image: url('../assets/customBG.svg');
+    background-size: cover;
+    background-position: center;
+    height: 250vh;
+  }
+}

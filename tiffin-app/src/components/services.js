@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button} from 'react-bootstrap';
-import '../styles/home.css'
+import '../styles/styles.css'
 import { Link } from 'react-router-dom';
 import Service1 from '../assets/home/service1.svg';
 import Service2 from '../assets/home/service2.svg';

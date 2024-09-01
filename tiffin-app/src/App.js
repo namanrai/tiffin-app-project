@@ -6,7 +6,6 @@ import Roti from './pages/Roti';
 import Tiffin from './pages/Tiffin';
 import Catering from './pages/Catering';
 import Order from './pages/Order';
-import Footer from './components/footer';
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
           <Route path='/catering' element={<Catering/>} />
           <Route path='/order' element={<Order/>} />
         </Routes>
-      <Footer/>
+      
     </div>
   );
 }

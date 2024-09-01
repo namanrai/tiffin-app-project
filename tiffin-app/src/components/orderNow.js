@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button} from 'react-bootstrap';
-import '../styles/home.css'
+import '../styles/styles.css'
 import { Link } from 'react-router-dom';
 
 function OrderNow() {

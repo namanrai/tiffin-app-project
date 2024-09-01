@@ -1,5 +1,5 @@
 import { Container, Row, Col} from 'react-bootstrap';
-import '../styles/home.css'
+import '../styles/styles.css'
 import leftImage from '../assets/home/about-img-left.png'
 import rightImage from '../assets/home/about-img-right.png'
 

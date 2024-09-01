@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/home.css'
+import '../styles/styles.css'
 import OrderNow from './orderNow';
 
 function HomeLanding() {
