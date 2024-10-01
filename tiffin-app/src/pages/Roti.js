@@ -1,7 +1,8 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import '../styles/styles.css'; 
-import roti from '../assets/roti.svg';
+import roti from '../assets/roti-alt.svg';
 import OrderNow from "../components/orderNow";
+import Menu from "../components/menu";
 import Footer from '../components/footer';
 
 
@@ -32,6 +33,9 @@ function Roti() {
                         </Col>
                     </Row>
               </Container>
+
+              <Menu/>
+
                     <Container fluid>
                             <Row className="call-to-action-section my-5">
                                     <Col xs={12} className="d-flex justify-content-center">

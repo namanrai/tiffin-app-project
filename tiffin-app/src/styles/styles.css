@@ -1,11 +1,20 @@
 /*Home*/
 
 .landing {
-    background-image: url('../assets/home/bg-img.png');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    overflow: hidden;
     height: 80vh;
   }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the full area */
+    z-index: -1; /* Place the video behind the content */
+}
   
   .content {
     padding: 20px;
@@ -15,6 +24,7 @@
     max-width: 600px;
     font-size: xx-large;
     font-weight:700;
+    z-index: 1;
   }
 
   .landHead{
@@ -319,9 +329,15 @@
 }
 
 
+
+
 @media (max-width: 450px) {
   .footer-right {
     padding-top: 50px;
+}
+
+.footer-items{
+  padding-top: 3rem;
 }
 }
 
@@ -362,15 +378,19 @@
 
 .img2 {
   margin-top: -110px;
-  margin-right: 70px;
+  margin-right: 160px;
+  transform: scale(70%);
 }
 
 .img3 {
   margin-top: 150px;
+  transform: scale(70%);
 }
 
 .img1 {
-  margin-left: 70px;
+  margin-left: 80px;
+  transform: scale(70%);
+
 }
 
 @media (max-width: 768px) {
@@ -571,4 +591,49 @@ form {
     background-position: center;
     height: 250vh;
   }
+}
+
+/*Menu Component*/
+
+.menu-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.product-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.product-container:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100px; /* Adjust the size of the image */
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-details {
+  flex-grow: 1; /* Allow this div to take available space */
+  text-align: left; /* Align text to the left */
+}
+
+.modal-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-left h3 {
+  margin-bottom: 10px;
+}
+
+.modal-left p {
+  margin-bottom: 20px;
 }

@@ -1,7 +1,8 @@
 import {Navbar, Nav, Container, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/app.css';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
+// import RestaurantIcon from '@mui/icons-material/Restaurant';
+import rotiLogo from '../assets/logo-roti.svg';
 
 
 export const NavBar = () => {
@@ -9,7 +10,14 @@ export const NavBar = () => {
     <>
     <Navbar collapseOnSelect className='navbar' data-bs-theme="light" expand='lg'>
       <Container>
-        <Navbar.Brand className='navTitle' as={Link} to='/'><RestaurantIcon className='footer-logo'/>Roti Express</Navbar.Brand>
+        <Navbar.Brand className='navTitle' as={Link} to='/'> <img
+              src={rotiLogo} 
+              alt="Roti Xpress Logo" 
+              className="footer-logo" 
+              style={{ width: '40px', marginRight: '10px' }} // Adjust size as needed
+            />
+            Roti Xpress
+            </Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse>
           <Nav className="ms-auto">
