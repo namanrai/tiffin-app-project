@@ -29,13 +29,15 @@ function Footer() {
               </Col>
     
 
-              <Col xs={12} md={5} className="text-center footer-col footer-items">
+              <Col xs={12} md={5} className="footer-col footer-items">
                     <div className="footer-column">
-                            <h6>Heading 1</h6>
+                            <h6>Quick Links</h6>
                             <ul className="list-unstyled">
-                                <li><a href="#link1">Link 1</a></li>
-                                <li><a href="#link2">Link 2</a></li>
-                                <li><a href="#link3">Link 3</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/roti">Roti</a></li>
+                                <li><a href="/tiffin">Tiffin</a></li>
+                                <li><a href="/catering">Catering</a></li>
+                                <li><a href="/order">Order</a></li>
                             </ul>
                     </div>
                     
@@ -49,8 +51,8 @@ function Footer() {
                   <iframe
                     title="Roti Xpress Location"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11532.263859130406!2d-79.7653087!3d43.7299565!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b173bfe25d665%3A0x31d78a9c790bc136!2sRoti%20Xpress!5e0!3m2!1sen!2sca!4v1727810913122!5m2!1sen!2sca"
-                    width="70%"
-                    height="150"
+                    width="90%"
+                    height="180"
                     style={{ border: 0, borderRadius: '8px' }}
                     allowFullScreen=""
                     loading="lazy"

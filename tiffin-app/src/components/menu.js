@@ -2,54 +2,63 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import '../styles/styles.css'; 
 import roti from '../assets/home/roti-alt.png';
+import { useNavigate } from 'react-router-dom';
 
 // Product data
 const products = [
   {
     id: 1,
-    name: 'Product 1',
-    price: '$10.00',
-    details: 'Delicious roti made with whole wheat flour and cooked to perfection.',
+    name: 'Punjabi Roti',
+    price: '0.50c',
+    details: 'Made using a robust blend of Sher Atta, canola oil, ghee, and salt, this roti is crafted for those who love a hearty and satisfying meal.\nNo Maida\nNo Artificial Colors\nNo Artificial Flavors\nNo Preservatives\nBulk discount pricing available for pickup orders.\n\nPlease call 437-215-4881 for pricing.\n\nShipping Details: We provide local deliveries for bulk orders, however, pick up is preferred from our location.',
     image: roti,
   },
   {
     id: 2,
-    name: 'Product 2',
-    price: '$12.00',
-    details: 'A delightful combination of wheat and multi-grain flour for a healthy meal.',
+    name: 'Gujrati Roti',
+    price: '0.50c',
+    details: 'Prepared with a perfect mix of Sher Atta, canola oil, ghee, and salt, this roti is soft and light, ideal for daily meals.\nNo Maida\nNo Artificial Colors\nNo Artificial Flavors\nNo Preservatives\nBulk discount pricing available for pickup orders.\n\nPlease call 437-215-4881 for pricing.\n\nShipping Details: We provide local deliveries for bulk orders, however, pick up is preferred from our location.',
     image: roti,
   },
   {
     id: 3,
-    name: 'Product 3',
-    price: '$15.00',
-    details: 'Fluffy and soft roti made with ghee, perfect for any meal.',
+    name: 'Jain Roti',
+    price: '0.60c',
+    details: 'Crafted with mill-fresh flour, canola oil, ghee, and salt, this roti adheres strictly to Jain dietary principles, ensuring purity and adherence to tradition..\nNo Maida\nNo Artificial Colors\nNo Artificial Flavors\nNo Preservatives\nBulk discount pricing available for pickup orders.\n\nPlease call 437-215-4881 for pricing.\n\nShipping Details: We provide local deliveries for bulk orders, however, pick up is preferred from our location.',
     image: roti,
   },
   {
     id: 4,
-    name: 'Product 4',
-    price: '$11.00',
-    details: 'Our signature Punjabi-style roti, packed with flavor and health benefits.',
+    name: 'Whole Wheat Roti',
+    price: '0.60c',
+    details: 'Made with 100% Sher Atta, canola oil, ghee, and salt, this roti is a healthy choice for those who prefer whole grains.\nNo Maida\nNo Artificial Colors\nNo Artificial Flavors\nNo Preservatives\nBulk discount pricing available for pickup orders.\n\nPlease call 437-215-4881 for pricing.\n\nShipping Details: We provide local deliveries for bulk orders, however, pick up is preferred from our location.',
     image: roti,
   },
   {
     id: 5,
-    name: 'Product 5',
-    price: '$14.00',
-    details: 'A traditional Gujarati roti with a perfect blend of softness and crisp.',
+    name: 'Parathas Roti',
+    price: '$1.0',
+    details: 'Our parathas are made with Sher Atta, canola oil, ghee, and salt, offering a flaky, flavorful alternative to traditional rotis.\nNo Maida\nNo Artificial Colors\nNo Artificial Flavors\nNo Preservatives\nBulk discount pricing available for pickup orders.\n\nPlease call 437-215-4881 for pricing.\n\nShipping Details: We provide local deliveries for bulk orders, however, pick up is preferred from our location.',
     image: roti,
   },
   {
     id: 6,
-    name: 'Product 6',
-    price: '$16.00',
-    details: 'A wholesome and nutritious roti, great for everyday meals.',
+    name: 'Custom Roti',
+    price: '$0.5-1.0',
+    details: 'Custom-made with Sher Atta, canola oil, ghee, and salt to suit your unique taste preferences or dietary needs.\nNo Maida\nNo Artificial Colors\nNo Artificial Flavors\nNo Preservatives\nBulk discount pricing available for pickup orders.\n\nPlease call 437-215-4881 for pricing.\n\nShipping Details: We provide local deliveries for bulk orders, however, pick up is preferred from our location.',
     image: roti,
   },
 ];
 
+
+
 const Menu = () => {
+
+  const navigate = useNavigate();
+  const handleOrderNow = () => {
+    navigate('/order'); // Navigate to the order page
+  };
+
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -71,9 +80,9 @@ const Menu = () => {
         <h2 className="text-center my-5">Our Menu</h2>
         <Row>
           {products.map((product) => (
-            <Col xs={12} md={4} className="mb-4" key={product.id}>
+            <Col xs={12} md={6} lg={4} className="mb-4" key={product.id}>
               <div
-                className="product-container"
+                className="product-container-menu"
                 onClick={() => handleOpenModal(product)}
               >
                 <div className="d-flex justify-content-between align-items-center">
@@ -99,7 +108,7 @@ const Menu = () => {
       {selectedProduct && (
         <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
           <Modal.Header closeButton>
-            <Modal.Title>{selectedProduct.name}</Modal.Title>
+            <Modal.Title className='modal-head'>{selectedProduct.name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Container>
@@ -108,15 +117,20 @@ const Menu = () => {
                 <Col xs={12} md={6} className="modal-left">
                   <h3>{selectedProduct.name}</h3>
                   <p><strong>Price:</strong> {selectedProduct.price}</p>
-                  <p>{selectedProduct.details}</p>
-                  <Button variant="primary">Order Now</Button>
+                  <p>{selectedProduct.details.split('\n').map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}</p>
+                  <Button variant="primary" onClick={handleOrderNow}>Order Now</Button>
                 </Col>
                 {/* Right side: Product image */}
                 <Col xs={12} md={6}>
-                  <img
+                  <img 
                     src={selectedProduct.image}
                     alt={selectedProduct.name}
-                    className="img-fluid"
+                    className="img-fluid modal-img"
                   />
                 </Col>
               </Row>

@@ -280,9 +280,13 @@
 
   /* footer.css */
 .footer {
-  background-color: #F5F5FD;
+  background-color: #fdc59036;
   color: #222222;
   padding: 50px 0;
+}
+
+.footer-left{
+  transform: scale(125%);
 }
 
 .footer-logo {
@@ -328,6 +332,9 @@
   text-decoration: underline;
 }
 
+.footer-items{
+  text-align: center;
+}
 
 
 
@@ -336,8 +343,25 @@
     padding-top: 50px;
 }
 
+
+.footer-left{
+  transform: scale(100%);
+}
+
 .footer-items{
   padding-top: 3rem;
+}
+}
+
+@media (max-width: 650px) {
+
+.footer-left{
+  transform: scale(100%);
+}
+
+.footer-items{
+  padding-top: 3rem;
+  text-align: left;
 }
 }
 
@@ -456,7 +480,7 @@
 /* Order */
 .order-page {
   padding-top: 50px; /* Adds padding around the page */
-  background-color: #FFE1C6;
+  background-color: var(--white);
   background-size: cover;
   background-position: center;
   height: auto;
@@ -600,23 +624,41 @@ form {
   background-color: #f8f9fa;
 }
 
-.product-container {
-  padding: 20px;
+
+.menu-section h2{
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.product-container-menu {
+  padding: 2px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: #fff;
+  transform: scale(90%);
+  max-width: 600px;
+  max-height: 400px;
 }
 
-.product-container:hover {
+.product-details h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.product-container-menu:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
-  width: 100px; /* Adjust the size of the image */
-  height: auto;
+  width: 100%; /* Adjust the size of the image */
+  height: 100%;
   border-radius: 5px;
+  padding-right: 1rem;
 }
 
 .product-details {
@@ -636,4 +678,30 @@ form {
 
 .modal-left p {
   margin-bottom: 20px;
+}
+
+.modal-left h3 {
+  color: var(--primary); /* Custom color for heading */
+}
+
+.modal-left p {
+  color: #212529; /* Custom color for text */
+}
+
+.modal-left p strong {
+  color: #212529; /* Custom color for bold text */
+}
+
+.modal-left button {
+  background-color: var(--primary); /* Custom background color for the button */
+  color: white; /* Text color for the button */
+  border: none; /* Remove border */
+}
+
+.modal-left button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+.modal-img{
+  padding: 3rem;
 }
